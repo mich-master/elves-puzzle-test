@@ -1,7 +1,8 @@
 use aho_corasick::AhoCorasick;
 
 const DIGITS: [&str; 19] = [
-    "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", 
+    "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "one", "two", "three", "four", "five", "six",
+    "seven", "eight", "nine",
 ];
 
 fn utf8_to_digit(code: u8) -> Option<u32> {
@@ -1067,8 +1068,8 @@ lpncsfkn7fsgvkl
 2four3threesxxvlfqfive4
 nine6eightsevenzx9twoxc
 hmbfjdfnp989mfivefiverpzrjs";
-    // let r: u32 = elves_puzzle(text);
-    // println!("{}", r);
+    let r: u32 = elves_puzzle(text);
+    println!("{}", r);
 
     let r: u32 = elves_puzzle_2(text);
     println!("{}", r);
@@ -1086,8 +1087,7 @@ fn test_elves_puzzle() {
 
 #[test]
 fn test_elves_puzzle_2() {
-    let text =
-    "two1nine
+    let text = "two1nine
     eightwothree
     abcone2threexyz
     xtwone3four
